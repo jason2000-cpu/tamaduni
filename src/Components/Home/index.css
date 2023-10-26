@@ -1,9 +1,8 @@
 .main {
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-weight: bolder;
-    height: 100vh
+
+}
+
+
+.hist, .img{
+    display:inline-block ;
 }
