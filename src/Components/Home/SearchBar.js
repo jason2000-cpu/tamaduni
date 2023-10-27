@@ -3,10 +3,10 @@ import React from 'react'
 
 
 //Icons
-import { FaBeer } from 'react-icons/fa';
 import { FaSearch } from 'react-icons/fa';
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+
 
 function SearchBar() {
   return (
