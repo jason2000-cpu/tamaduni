@@ -94,7 +94,8 @@
 
 /* Active Community component Styles */
 .activeComm {
-    /* border: 2px solid black; */
+    border: 2px solid black;
+    height: 86vh;
     padding: 1rem;
     background-color: rgba(246, 212, 114, .1);
 }
@@ -130,37 +131,29 @@
     overflow: auto ;
 }
 
+
 /* For WebKit (Chrome, Safari) */
-.discover::-webkit-scrollbar {
-    width: 0.5rem; /* Width of the vertical scrollbar */
-  }
+/* .discover::-webkit-scrollbar {
+    width: 0.5rem;
+  } */
   
-  .discover::-webkit-scrollbar-thumb {
-    /* background: #888; Color of the scrollbar thumb */
-    border-radius: 2rem; /* Rounded thumb */
-  }
+  /* .discover::-webkit-scrollbar-thumb {
+    background: #888; Color of the scrollbar thumb
+    border-radius: 2rem; 
+  } */
 
   
+  .discoverCard {
+    border: 2px solid black;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 0rem 1rem;
+    width: 80%;
+    
+  }
 
-.discoverCard{
+  .info {
     /* border: 2px solid black; */
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 1rem;
-    background-color: #D9D9D9;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 7px;
-    height: 10rem;
     display: flex;
-    /* width: 60%; */
-    /* justify-content: space-between; */
-}
 
-.intro-line{
-    /* border: 2px solid black; */
-    /* width: 50%; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+  }
