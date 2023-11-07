@@ -2,7 +2,7 @@ import React from 'react'
 
 function Discover2() {
   return (
-    <div>
+    <div >
       <div style={{paddingLeft:"2rem"}}>
         <h1>Discover</h1>
       </div>

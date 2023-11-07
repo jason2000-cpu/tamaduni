@@ -164,30 +164,23 @@
 
   /* Popular communities styles */
 
-  .comm {
-    display: flex; 
-  }
-
-  .comm-card{
-    border: 2px solid black;
-    width: 100%;
-  }
-  
-  .comm-demo {
+  .pop-card{
     /* border: 2px solid black; */
     display: flex;
-    justify-content: space-around;
-    padding: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
   }
 
-  .comm-stat{
-    /* border: 2px solid black; */
-    display: flex;
-    align-items: center;
-    /* justify-content: space-around; */
-    width: 100%;
-    /* background-color: rgba(217, 217, 217, .5); */
+  .pop-card-btn{
+    width:5rem; 
+    height:1.5rem;
+    background-color:rgba(246, 212, 114, .4);
+    border-radius:5px; 
+    border:none; 
+    font-size:18px;
+    font-family: 'Elephant';
   }
+
 
 
 
@@ -209,10 +202,9 @@ body {
     font-size: 14px;
   }
   .projcard-container {
-    /* margin: 0 0 50px 0; */
+    margin: 0 0 50px 0;
     height: 85vh;
     overflow: scroll;
-
   }
 
   /* For WebKit (Chrome, Safari) */
@@ -237,7 +229,7 @@ body {
   }
   .projcard {
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 280px;
     margin-bottom: 40px;
     border-radius: 10px;
@@ -349,8 +341,8 @@ body {
     background-color: #424242;
     transition: width 0.2s ease;
   }
-  .projcard-blue .projcard-bar { background-color: #0088FF; }
-  .projcard-blue::before { background-image: linear-gradient(-70deg, #0088FF, transparent 50%); }
+  .projcard-bar { background-color: #F6D490; }
+  .projcard-bar::before { background-image: linear-gradient(-70deg, #0088FF, transparent 50%); }
   .projcard-blue:nth-child(2n)::before { background-image: linear-gradient(-250deg, rgba(217, 217, 217, .5), transparent 50%); }
   .projcard-red .projcard-bar { background-color: #D62F1F; }
   .projcard-red::before { background-image: linear-gradient(-70deg, #D62F1F, transparent 50%); }

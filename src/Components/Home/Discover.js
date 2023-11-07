@@ -19,7 +19,7 @@ function Discover() {
     <>
     <div>
         <div>
-            <h3 style={{ fontFamily: '' }}>Discover</h3>
+            <h3 style={{ fontFamily: '', border:"2px solid black" }}>Discoverrrrr</h3>
         </div>
         <div className="discover">
                 <div className='discoverCard'>
