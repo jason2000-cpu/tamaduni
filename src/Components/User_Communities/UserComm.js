@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image';
 
+import "./UserComm.css"
+
 import { BsPlusCircle } from "react-icons/bs";
 import { FiLogOut } from "react-icons/fi";
 

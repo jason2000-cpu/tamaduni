@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React from 'react'
 
+import "./SearchBar.css"
+
 
 //Icons
 import { FaSearch } from 'react-icons/fa';

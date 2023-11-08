@@ -1,0 +1,69 @@
+/* Active Community component Styles */
+.activeComm {
+    /* border: 2px solid black; */
+    height: 100%;
+    padding: 0 1rem;
+    background-color: rgba(246, 212, 114, .1);
+}
+
+.topics{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    height:2.5rem;
+    width: 11em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.active {
+    /* border: 2px solid rgba(0, 0, 0, 0.2); */
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    background-color: rgba(246, 212, 114, .1);
+}
+.hashIcon {
+    display:flex;
+    align-items:center
+}
+
+
+/* Discover  Community Styles */
+
+.discover{
+    /* border: 2px solid black; */
+    
+    /* height: 84vh ; */
+    overflow: scroll ;
+}
+
+
+/* For WebKit (Chrome, Safari) */
+.discover::-webkit-scrollbar {
+    width: 0.5rem;
+  } 
+  
+   .discover::-webkit-scrollbar-thumb {
+    /* background: #888;  Color of the scrollbar thumb */
+    border-radius: 2rem; 
+  }
+
+  
+  .discoverCard {
+    /* border: 2px solid black; */
+    border-radius: 1rem;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    padding: 0rem 1rem;
+    /* width: 80%; */
+    background-color: rgba(217, 217, 217, .5);
+    
+  }
+
+  .info {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+
+  }
+

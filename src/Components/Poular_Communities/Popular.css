@@ -1,0 +1,19 @@
+
+  /* Popular communities styles */
+
+  .pop-card{
+    /* border: 2px solid black; */
+    display: flex;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .pop-card-btn{
+    width:5rem; 
+    height:1.5rem;
+    background-color:rgba(246, 212, 114, .4);
+    border-radius:5px; 
+    border:none; 
+    font-size:18px;
+    font-family: 'Elephant';
+  }

@@ -1,0 +1,32 @@
+.side{
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding-top: 1rem;
+    display: inline-block;
+    height: 100%;
+    padding-left: 1rem;
+    margin-left: -8px;
+    width: 5rem;
+    background-color: rgba(246, 212, 114, .2);
+    /* justify-content: space-between; */
+    /* align-items: space-between; */
+
+}
+
+.userComm {
+    margin-bottom: 3rem;
+}
+.userComm p{
+    font-size: 16px
+}
+
+.logout{
+    margin-top: 5rem;
+    /* margin-left: 1rem; */
+    width: 3rem;
+    height: 3rem;
+    /* border-radius: 50%; */
+    /* background-color: #F6D490; */
+    /* border: 2px solid black; */
+    cursor: pointer;
+}
