@@ -4,8 +4,13 @@
   .pop-card{
     /* border: 2px solid black; */
     display: flex;
+    align-items: center;
     margin-bottom: 1rem;
-    width: 100%;
+    /* width: 100%; */
+  }
+
+  .pop-card-img{
+    margin-top: 1rem;
   }
 
   .pop-card-btn{
@@ -14,6 +19,6 @@
     background-color:rgba(246, 212, 114, .4);
     border-radius:5px; 
     border:none; 
-    font-size:18px;
+    font-size:14px;
     font-family: 'Elephant';
   }

@@ -19,7 +19,7 @@ export default function index() {
         <ActiveComm />
         <Discover2 />
         <Popular />
-      </div>
+      </div> 
     </>
   )
 }

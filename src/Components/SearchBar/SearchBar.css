@@ -1,11 +1,11 @@
 .searchBar {
     margin-top: -7px;
     margin-left: -8px;
-    padding-top: 6px;
+    padding: .7rem 0rem .7rem 0rem;
     background-color: #F6D490;
-    width: 100vw;
+    width: 98.7vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;   
 }
 .search input{
 
@@ -14,8 +14,7 @@
     padding: 10px;
     width: 100%;
     justify-content: flex-end ;
-    height: 1.5rem;
-    /* box-shadow: 0px 0px 10px 0px #000000; */
+    box-shadow: 0px 0px 10px 0px #000000;
 }
 .search {
     width: 56%;
@@ -24,9 +23,9 @@
 }
 .search-icon{
     position: absolute;
-    size: 10rem;
+    /* size: 1rem; */
     top:3%;
-    right: 24%;
+    right: 22.5%;
 }
 
 .NavIcons{
@@ -34,7 +33,7 @@
     /* justify-content: space-between; */
     align-items: center;
     /* width: 20%; */
-    margin-left: 1rem;
+    margin-left: .5rem;
 }
 .NavIcons .arrowLeft, .NavIcons .arrowRight{
     width: 2rem;
@@ -45,7 +44,7 @@
     cursor: pointer;
     color: rebeccapurple;
 }
-.user {
+.user-profile {
     margin-right: 2.5rem;
     /* border: 2px solid black; */
 }

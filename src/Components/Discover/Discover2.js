@@ -4,9 +4,9 @@ import './Discover.css'
 
 function Discover2() {
   return (
-    <div >
-      <div style={{paddingLeft:"2rem"}}>
-        <h1>Discover</h1>
+    <div>
+      <div style={{paddingLeft:"1rem"}}>
+        <h2>Discover</h2>
       </div>
         <div className="projcard-container">
         <div className="projcard projcard-blue">

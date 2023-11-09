@@ -14,8 +14,8 @@ function SearchBar() {
   return (
     <div className='searchBar'>
         <div className='NavIcons'>
-            <FaArrowLeft size="25" className='arrowLeft'/>
-            <FaArrowRight size="25" className='arrowRight'/>
+            <FaArrowLeft size="15" className='arrowLeft'/>
+            <FaArrowRight size="15" className='arrowRight'/>
         </div>
         <div className='search'>
             <input type="text" placeholder="Search" />
@@ -23,8 +23,8 @@ function SearchBar() {
                 <FaSearch size="25" className='search-icon'/>
            </div>
         </div>
-        <div className='user'>
-            <Image src="/image/user.png" alt="user" width={60} height={60} className='img' />
+        <div className='user-profile'>
+            <Image src="/image/user.png" alt="user" width={30} height={30} className='img' />
         </div>
     </div>
   )
