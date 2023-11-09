@@ -7,6 +7,7 @@ import ActiveComm from '../Active_community/ActiveComm';
 import Discover from '../Discover/Discover';
 import Discover2 from '../Discover/Discover2';
 import Popular from '../Poular_Communities/Popular';
+import Passage from '../Rite_of_Passage/Passage';
 
 export default function index() {
 
@@ -17,8 +18,9 @@ export default function index() {
       <div className='main'>
         <UserComm />
         <ActiveComm />
-        <Discover2 />
-        <Popular />
+        {/* <Discover2 />
+        <Popular /> */}
+        <Passage />
       </div> 
     </>
   )

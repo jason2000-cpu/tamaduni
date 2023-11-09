@@ -1,0 +1,62 @@
+.passage {
+    width: 100vw;
+    /* margin: 0 .2rem; */
+    overflow: scroll;
+    /* border: 2px solid black; */
+}
+
+
+/* For WebKit (Chrome, Safari) */
+.passage::-webkit-scrollbar {
+    width: 0.5rem;
+} 
+
+.passage::-webkit-scrollbar-thumb {
+    /* background: #888;  Color of the scrollbar thumb */
+    border-radius: 2rem; 
+}
+
+.banner{
+    background-image: url("/image/RoP_Maasai1.png");
+    height: 40vh;
+    /* border: 2px solid black; */
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:.2rem;
+}
+.banner-text {
+    /* border: 2px solid black; */
+    /* position: absolute; */
+    left: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner h2{
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    margin-bottom: 0;
+}
+
+.passage-text{
+    /* border: 2px solid black; */
+    margin-top: 1rem;
+    padding: 0rem 2rem
+}
+.passage-text p{
+    font-size: 14px;
+}
+
+.passage-text li{
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    list-style-type: none
+}

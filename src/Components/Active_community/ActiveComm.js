@@ -7,7 +7,7 @@ import {BsHash} from 'react-icons/bs'
 function ActiveComm() {
   return (
     <div className='activeComm'>
-        <h2 style={{paddingBottom:"1rem"}}>Culture of The Week</h2>
+        <h2 style={{paddingBottom:"1rem"}}>Week's Culture</h2>
         <h3 style={{fontSize:"16px"}}> The Maasai</h3>
         <div className="topics active" >
             <div className='hashIcon'>
