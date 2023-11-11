@@ -5,8 +5,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin-left: -3px;
-    width: 4rem;
+    /* margin-left: -12px; */
+    width: 4.5rem;
     background-color: rgba(246, 212, 114, .2);
     align-items: center;
 }

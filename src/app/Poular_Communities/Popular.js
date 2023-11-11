@@ -6,9 +6,9 @@ import "./Popular.css"
 
 function Popular() {
   return (
-    <div style={{marginLeft:"1rem"}}>
+    <div style={{width:"15rem"}}>
       <div>
-        <h1 >Popular</h1>
+        <h2 >Popular</h2>
       </div>
       <div className='pop-comm'>
           <div className='pop-card'>

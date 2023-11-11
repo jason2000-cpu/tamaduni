@@ -1,0 +1,13 @@
+/* .home{
+    background-color: #F6D490;
+    margin: 0;
+
+} */
+.main {
+    display: flex;
+    height: 88.75vh;
+    /* margin-right: -7px; */
+    margin-left: -7px;
+    /* border: 2px solid red; */
+    overflow:hidden;
+}

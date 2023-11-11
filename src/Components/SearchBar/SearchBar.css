@@ -1,9 +1,10 @@
 .searchBar {
+    /* border: 2px solid black; */
     margin-top: -7px;
     margin-left: -8px;
     padding: .7rem 0rem .7rem 0rem;
     background-color: #F6D490;
-    width: 98.7vw;
+    width: 99.5vw;
     display: flex;
     justify-content: space-between;   
 }

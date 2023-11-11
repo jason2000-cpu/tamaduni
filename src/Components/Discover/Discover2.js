@@ -4,7 +4,7 @@ import './Discover.css'
 
 function Discover2() {
   return (
-    <div>
+    <div style={{width:"80%"}}>
       <div style={{paddingLeft:"1rem"}}>
         <h2>Discover</h2>
       </div>
