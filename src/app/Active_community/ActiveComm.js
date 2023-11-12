@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 
 import { usePathname } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
@@ -34,10 +34,14 @@ function ActiveComm({ culture }) {
     const searchParam = useSearchParams();
 
     const aspect = searchParam.get('aspect');
+    const [cultureFeat, setCultureFeat] = useState('Maasai');
 
   return (
     <div className='activeComm'>
-        <h2 style={{paddingBottom:"1rem"}}>Week's Culture</h2>
+        {
+            cultureFeat === culture ?
+            <h2 style={{paddingBottom:"1rem"}}>Week's Culture</h2> : null
+        }
         <h3 style={{fontSize:"16px"}}> The { culture }</h3>
         {
             topics.map((topic)=>(
