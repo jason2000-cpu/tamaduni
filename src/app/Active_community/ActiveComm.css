@@ -28,6 +28,12 @@
     align-items:center
 }
 
+.link{
+  text-decoration: none;
+  color: black;
+
+}
+
 
 /* Discover  Community Styles */
 

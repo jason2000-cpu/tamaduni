@@ -1,14 +1,23 @@
+'use client'
+
 import React from 'react'
+
+import { useSearchParams } from 'next/navigation'
 
 import './Passage.css'
 
 function Passage() {
+    const searchParams = useSearchParams();
+
+    const culture = searchParams.get('culture');
+    const aspect = searchParams.get('aspect');
+
   return (
     <div className='passage'>
-        <div className='banner'>
+        <div className='banner' style={{backgroundImage:`url(/image/RoP_${culture}.png)`}}>
             <div className='banner-text'>
-                <h2>The Maasai</h2>
-                <h2>Rite of Passage</h2>
+                <h2>The { culture }</h2>
+                <h2>{ aspect }</h2>
             </div>
 
         </div>
