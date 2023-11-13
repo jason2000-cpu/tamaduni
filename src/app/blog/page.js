@@ -10,7 +10,7 @@ import BlogPost from './BlogPost'
 import './Passage.css'
 
 function Passage() {
-    const [passage, setPassage] = useState(null);
+    const [status, setStatus] = useState(false);
     const searchParams = useSearchParams();
 
     const culture = searchParams.get('culture');
@@ -19,7 +19,7 @@ function Passage() {
 
     useEffect(() => {
         setTimeout(() => {
-            setPassage("HELLO WORLD")
+            setStatus(true)
         }, 3000);
     
     })
@@ -28,10 +28,9 @@ function Passage() {
     <div className='passage'>
 
         {
-            passage ? <BlogPost  culture={culture} aspect={aspect}/> : <BlogLoader />
+            status ? <BlogPost  culture={culture} aspect={aspect}/> : <BlogLoader />
         }
-
-
+        
     </div>
   )
 }

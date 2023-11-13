@@ -1,6 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function BlogPost({ culture, aspect}) {
+    const [data, setData] = useState(null);
+
+    const params = `?culture=${culture}&aspect=${aspect}`
+
+    let url = "http://localhost:3000/api"; 
+
+    // url = url + "?origin=*";
+    // Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];});
+
+const getData = async () => {
+    try {
+        await fetch(`${url}${params}`)
+        .then(res => res.json())
+        .then(data =>{
+            console.log(JSON.parse(data));
+            setData(JSON.parse(data));
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    } catch (error) {
+        console.error(error);
+    }
+    
+    };
+
+
+    useEffect(() => {
+        getData();
+    }, [culture, aspect]);
+
   return (
         <div>
                     <div className='banner' style={{backgroundImage:`url(/image/RoP_${culture}.png)`}}>
@@ -10,7 +41,29 @@ function BlogPost({ culture, aspect}) {
                         </div>
 
                     </div>
-                    <div className='passage-text'>
+
+                    {
+                        data ?
+                            <div className='passage-text'>
+                                { !data.aspect === "null" ? <h2>{ data.aspect }</h2> : null }
+                                <h3>Place of Origin</h3>
+                                <p>{data.place_of_origin}</p>
+                                <h3>Current Population</h3>
+                                <p>{data.current_population}</p>
+                                <h3>Current Places of Existence</h3>
+                                <p>{data.current_places_of_existence}</p>
+                                <h3>Language</h3>
+                                <p>{data.language}</p>
+                            </div> 
+                            : <p>Loading...</p>
+                    }
+
+
+                    {/* <div className='passage-text'>
+                        {
+                            data? data.culture  : <p>Loading...</p>
+                        }
+                    
                         <h3>Male Rite of Passage</h3>
                         <p>
                             <span style={{fontSize:"70px"}}>T</span>
@@ -60,7 +113,7 @@ function BlogPost({ culture, aspect}) {
                             </p>
                         </ol>
 
-                    </div> 
+                    </div>  */}
         </div>
   )
 }

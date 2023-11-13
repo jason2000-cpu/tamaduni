@@ -46,10 +46,10 @@ function ActiveComm({ culture }) {
         {
             topics.map((topic)=>(
                 
-                <div className={`topics ${aspect === topic.aspect ? 'active': ''}`}>
+                <div key={topic.id} className={`topics ${aspect === topic.aspect ? 'active': ''}`}>
                     <BsHash size="19" className='hash'/>
-                    <p>
-                        <Link className='link'  key={topic.id} href={`/blog?culture=${culture}&aspect=${topic.aspect}`}>{ topic.aspect } </Link>
+                    <p >
+                        <Link className='link'   href={`/blog?culture=${culture}&aspect=${topic.aspect}`}>{ topic.aspect } </Link>
                     </p>
                 </div>
             ))
