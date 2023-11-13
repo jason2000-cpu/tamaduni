@@ -1,9 +1,7 @@
 const  OpenAIApi  = require("openai");
 
 
-const openai = new OpenAIApi({
-    apiKey: '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'
-});
+
 
 
 export  async function GET(req) {
