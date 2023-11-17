@@ -11,11 +11,10 @@ import './Passage.css'
 
 
 
-
 function Passage() {
     const [status, setStatus] = useState(false);
     const searchParams = useSearchParams();
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(null);
 
     const culture = searchParams.get('culture');
     const aspect = searchParams.get('aspect');
@@ -33,11 +32,14 @@ function Passage() {
     useEffect(() => {
         try {
              fetch(`${url}${params}`)
-            .then(res => res.json())
+            .then(res =>{
+                console.log(res)
+                res.json()
+            })
             .then(data =>{
-                console.log(JSON.parse(data));
                 setData(JSON.parse(data));
                 setStatus(true);
+                console.log("DATA ::::",JSON.parse(data));   
             })
             .catch((error) => {
                 console.error('Error:', error);

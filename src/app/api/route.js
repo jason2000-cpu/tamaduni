@@ -1,8 +1,9 @@
 const  OpenAIApi  = require("openai");
+const env = require("dotenv").config();
 
 
 const openai = new OpenAIApi({
-    APIKey: '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'
+    APIKey: env.API_KEY
 })
 
 
@@ -12,18 +13,24 @@ export  async function GET(req) {
     const aspect = searchParams.get('aspect');
     console.log(culture, aspect);
 
-    const prompt = `
-                The ${aspect} of the ${culture} in detail. Every point mus have atleast 2 paragraphs.
+    const prompt1 = `
+                The ${culture} in detail. Every point mus have atleast 2.
                 Put the answer in this JSON format:
                 {
                     culture: "${culture}",
-                    aspect: "${aspect}",
                     place_of_origin :"place of origin in detail goes here",
                     current_population:"current population in detail goes here",
                     current places of existence :"current places of existence in detail goes here",
                     language :"language in detail goes here",
                 }
                 `;
+
+    const propmt2 = `
+                The ${aspect} of the ${culture} in detail. in point form.
+                Each points should be atleast 4 paragraphs
+             `
+    
+    const prompt = aspect === null ? propmt2 : prompt1
 
   const response = await openai.chat.completions.create({
       messages: [{ role: "system", content: prompt }],
