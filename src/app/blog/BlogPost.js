@@ -1,42 +1,38 @@
 import React, { useEffect, useState } from 'react'
 
-function BlogPost({ culture, aspect}) {
-    const [data, setData] = useState(null);
+function BlogPost({ data, aspect}) {
+    // const [data, setData] = useState(null);
 
-    const params = `?culture=${culture}&aspect=${aspect}`
-
-    let url = "http://localhost:3000/api"; 
+  
 
     // url = url + "?origin=*";
     // Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];});
 
-const getData = async () => {
-    try {
-        await fetch(`${url}${params}`)
-        .then(res => res.json())
-        .then(data =>{
-            console.log(JSON.parse(data));
-            setData(JSON.parse(data));
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-    } catch (error) {
-        console.error(error);
-    }
+// const getData = async () => {
+//     try {
+//         await fetch(`${url}${params}`)
+//         .then(res => res.json())
+//         .then(data =>{
+//             console.log(JSON.parse(data));
+//             setData(JSON.parse(data));
+//         })
+//         .catch((error) => {
+//             console.error('Error:', error);
+//         });
+//     } catch (error) {
+//         console.error(error);
+//     }
     
-    };
+//     };
 
 
-    useEffect(() => {
-        getData();
-    }, [culture, aspect]);
+ 
 
   return (
         <div>
-                    <div className='banner' style={{backgroundImage:`url(/image/RoP_${culture}.png)`}}>
+                    <div className='banner' style={{backgroundImage:`url(/image/RoP_${data.culture}.png)`}}>
                         <div className='banner-text'>
-                            <h2>The { culture }</h2>
+                            <h2>The { data.culture }</h2>
                             <h2>{ aspect }</h2>
                         </div>
 

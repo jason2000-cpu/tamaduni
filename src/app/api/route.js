@@ -1,7 +1,9 @@
 const  OpenAIApi  = require("openai");
 
 
-
+const openai = new OpenAIApi({
+    APIKey: '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'
+})
 
 
 export  async function GET(req) {
@@ -11,7 +13,7 @@ export  async function GET(req) {
     console.log(culture, aspect);
 
     const prompt = `
-                The ${aspect} of the ${culture}.
+                The ${aspect} of the ${culture} in detail. Every point mus have atleast 2 paragraphs.
                 Put the answer in this JSON format:
                 {
                     culture: "${culture}",
