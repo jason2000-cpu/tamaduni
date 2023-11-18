@@ -11,13 +11,13 @@ import useRequestRest from '../../../Hooks/useRequestRest'
 
 
 function Passage() {
-    const { status, info, aspect } = useRequestRest();
+    const { status, info, aspect, culture } = useRequestRest();
 
     return (
         <div className='passage'>
 
             {
-                status ? <BlogPost  data={info} aspect={aspect} /> : <BlogLoader />
+                status ? <BlogPost  data={info} aspect={aspect}  culture={culture} /> : <BlogLoader />
             }
             
         </div>

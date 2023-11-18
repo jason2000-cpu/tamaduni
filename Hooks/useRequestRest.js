@@ -21,7 +21,7 @@ function useRequestRest(){
                .then(data =>{
                    setInfo(data);
                    setStatus(true);
-                   console.log("DATA ::::",data);   
+                   console.log("DATA ::::",data.culture);   
                })
                .catch((error) => {
                    console.error('Error:', error);
@@ -33,7 +33,7 @@ function useRequestRest(){
        getData();
     }, [culture, aspect]); 
     
-    return { status, info, aspect }
+    return { status, info, aspect, culture }
 }
 
 export default useRequestRest;

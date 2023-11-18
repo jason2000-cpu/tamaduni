@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
-function BlogPost({ data, aspect}) {
+function BlogPost({ data, aspect, culture}) {
 
   return (
         <div>
-                    <div className='banner' style={{backgroundImage:`url(/image/RoP_${data.culture}.png)`}}>
+                    <div className='banner' style={{backgroundImage:`url(/image/RoP_${culture}.png)`}}>
                         <div className='banner-text'>
-                            <h2>The { data.culture }</h2>
+                            <h2>The {culture }</h2>
                             <h2>{ aspect }</h2>
                         </div>
 
@@ -16,6 +16,8 @@ function BlogPost({ data, aspect}) {
                         data ?
                             <div className='passage-text'>
                                 { !data.aspect === "null" ? <h2>{ data.aspect }</h2> : null }
+                                 <h2>Introduction</h2>
+                                 <p>{data.culture}</p>
                                 <h3>Place of Origin</h3>
                                 <p>{data.place_of_origin}</p>
                                 <h3>Current Population</h3>

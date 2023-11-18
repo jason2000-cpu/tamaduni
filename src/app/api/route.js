@@ -7,66 +7,60 @@ const openai = new OpenAIApi({
 })
 
 
-export async function GET(req) {
-    const { searchParams } = new URL(req.url);
-    const culture = searchParams.get('culture');
-    const aspect = searchParams.get('aspect');
-    console.log(culture, aspect);
+/** This code is used when I don't have access to internet */
 
-
-
-
-    const res = {
-            culture: culture,
-            place_of_origin :"place of origin in detail goes here",
-            current_population:"current population in detail goes here",
-            current_places_of_existence :"current places of existence in detail goes here",
-            language :"language in detail goes here",
-    }
-
-    console.log(res);
-
-    return Response.json(res);
-}
-
-
-
-
-
-
-
-// export  async function GET(req) {
+// export async function GET(req) {
 //     const { searchParams } = new URL(req.url);
 //     const culture = searchParams.get('culture');
 //     const aspect = searchParams.get('aspect');
 //     console.log(culture, aspect);
 
-//     const prompt1 = `
-//                 The ${culture} in detail. Every point mus have atleast 2.
-//                 Put the answer in this JSON format:
-                // {
-                //     culture: "${culture}",
-                //     place_of_origin :"place of origin in detail goes here",
-                //     current_population:"current population in detail goes here",
-                //     current places of existence :"current places of existence in detail goes here",
-                //     language :"language in detail goes here",
-                // }
-//                 `;
+//     const res = {
+//             culture: culture,
+//             place_of_origin :"place of origin in detail goes here",
+//             current_population:"current population in detail goes here",
+//             current_places_of_existence :"current places of existence in detail goes here",
+//             language :"language in detail goes here",
+//     }
 
-//     const propmt2 = `
-//                 The ${aspect} of the ${culture} in detail. in point form.
-//                 Each points should be atleast 4 paragraphs
-//              `
-    
-//     const prompt = aspect === null ? propmt2 : prompt1
+//     console.log(res);
 
-//   const response = await openai.chat.completions.create({
-//       messages: [{ role: "system", content: prompt }],
-//       model: "gpt-3.5-turbo",
-//     });
-
-//     console.log(response.choices[0].message.content);
-//     return Response.json(response.choices[0].message.content);
-
+//     return Response.json(res);
 // }
+
+
+
+
+
+/**This code is used when there is internet */
+
+export  async function GET(req) {
+    const { searchParams } = new URL(req.url);
+    const culture = searchParams.get('culture');
+    const aspect = searchParams.get('aspect');
+    console.log(culture, aspect);
+
+    const prompt1 = `
+                The ${culture} in detail. Every point mus have atleast 5 paragraphs.
+                Put the answer in key-value pairs JSON FORMAT with the keys being,
+                culture, place_of_origin, current_population, 
+                current_places_of_existence and language:
+                `;
+
+    const propmt2 = `
+                The ${aspect} of the ${culture} in detail. in point form.
+                 Each points should be atleast 4 paragraphs`
+    
+    const prompt = aspect === null ? propmt2 : prompt1
+
+  const response = await openai.chat.completions.create({
+      messages: [{ role: "system", content: prompt }],
+      model: "gpt-3.5-turbo",
+    });
+
+    let responseData = response.choices[0].message.content;
+    console.log(JSON.parse(responseData));
+    return Response.json(JSON.parse(responseData));
+
+}
 
