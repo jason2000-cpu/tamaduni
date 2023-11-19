@@ -43,11 +43,22 @@ function index() {
                     </div>
 
                 </div>
+                 <div  class="mt-3" style={{display:"flex", justifyContent:"center"}}>
+                    or
+                 </div>
+                <div className='login-alt'>
+                <div className='google-log'>
+                    <Image src='/image/google_logo.png' alt='google' width={40} height={40} />
+                    <p>Login With Google</p>
+                </div>
+                <div className='facebook-log'>
+                    <Image src='/image/facebook_logo1.png' alt='facebook' style={{border:"2px solid black"}} width={50} height={50} />
+                    <p>Login With Facebook</p>
+                </div>
+
+            </div>
             </div>
 
-            <div>
-
-            </div>
         </div>
     </div>
   )

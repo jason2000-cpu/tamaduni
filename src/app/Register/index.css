@@ -11,3 +11,19 @@
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
 }
+
+.login-alt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.google-log, .facebook-log{
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 22rem;
+    margin-bottom: 2rem;
+}
