@@ -1,0 +1,13 @@
+.login{
+    /* border: 2px solid black; */
+    height: 97vh;
+
+}
+
+.pattern {
+    /* border: 2px solid black; */
+    height: 97vh;
+    background-image: url('/image/pattern2.avif');
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
