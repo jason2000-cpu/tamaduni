@@ -1,8 +1,16 @@
-import React from 'react'
+'use client'
 
-function Home() {
+import React, { useState } from 'react'
+
+import SearchBar from '@/Components/SearchBar/SearchBar';
+
+
+function Home({ children }) {
+    const [loggedIn, setLogggedIn] = useState(false);
   return (
-    <div>Home</div>
+    <>
+        {/* <SearchBar /> */}
+    </>
   )
 }
 

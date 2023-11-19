@@ -26,7 +26,8 @@
     position: absolute;
     /* size: 1rem; */
     top:3%;
-    right: 22.5%;
+    right: 23%;
+    cursor: pointer;
 }
 
 .NavIcons{

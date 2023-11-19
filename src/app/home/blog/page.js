@@ -6,7 +6,7 @@ import React from 'react'
 import BlogLoader from './BlogLoader'
 import BlogPost from './BlogPost'
 import './Passage.css'
-import useRequestRest from '../../../Hooks/useRequestRest'
+import useRequestRest from '../../../../Hooks/useRequestRest'
 
 
 
