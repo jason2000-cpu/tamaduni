@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -6,6 +6,16 @@ import './index.css';
 
 
 function Register() {
+const [formData, setFormData] = useState({});
+
+
+function handleSubmit(){
+    // e.preventDefault()
+    alert("success")
+    console.log(formData)
+}
+
+console.log(formData);
   return (
     <div className='' style={{ width: "99vw"}}>
         <div className='row'>
@@ -14,37 +24,91 @@ function Register() {
             </div>
             <div className='login col-4'>
                 <div style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
-                    <Image src="/image/logo.png" alt="tamaduni logo" width={160} height={140} />
-                    <h2 style={{letterSpacing:"10px"}}>Signup</h2>
+                    <Image src="/image/logo.png" alt="tamaduni logo" width={100} height={100} />
+                    <h3 style={{letterSpacing:"10px"}}>Signup</h3>
                 </div>
                 <div className='input'>
                         {/* form inputs */}
-                    <div class="row mb-3">
-                        <label for="email" class="form-label" >Email</label>
-                        <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" style={{width:"26rem"}}/>
+                    <div className="row mb-3">
+                        <div className="col">
+                            <label htmlFor="Fname" className="form-label" >Fist Name</label>
+                            <div className="col-sm-10">
+                            <input 
+                                type="text" 
+                                className="form-control" 
+                                id="Fname"
+                                name='Fname'
+                                style={{width:'12.5rem'}} 
+                                onChange={(e)=>setFormData({...formData, Fname:e.target.value})}
+                                />
+                            </div>
+                        </div>
+                        <div className="col">
+                            <label htmlFor="Sname" className="form-label" >Second Name</label>
+                            <div className="col-sm-10">
+                            <input 
+                                type="text" 
+                                className="form-control" 
+                                id="Sname" 
+                                name='Sname'
+                                style={{width:'12.5rem'}}
+                                onChange={(e)=>setFormData({...formData, Sname:e.target.value})}
+                                />
+                            </div>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <div class="col-sm-10" >
-                            <input  type="password" class="form-control" id="password"  style={{width:"26rem"}}/>
+                    <div className="row mb-3">
+                        <label htmlFor="email" className="form-label">Email</label>
+                        <div className="col-sm-10" >
+                            <input  
+                            type="email" 
+                            className="form-control" 
+                            id="email"  
+                            style={{width:"26rem"}}
+                            onChange={(e)=>setFormData({...formData, email:e.target.value})}
+                            />
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="check1" />
-                            <label class="form-check-label" for="check1">
+                    <div className="row mb-3">
+                        <div className="col">
+                            <label htmlFor="password" className="form-label" >Password</label>
+                            <div className="col-sm-10">
+                            <input 
+                                type="password" 
+                                className="form-control" 
+                                id="password" 
+                                style={{width:'12.5rem'}} 
+                                onChange={(e)=>setFormData({...formData, password:e.target.value})}
+                                />
+                            </div>
+                        </div>
+                        <div className="col">
+                            <label htmlFor="password" className="form-label" >Confirm Password</label>
+                            <div className="col-sm-10">
+                            <input 
+                                type="password" 
+                                className="form-control" 
+                                id="password"  
+                                style={{width:'12.5rem'}}
+                                onChange={(e)=>setFormData({...formData, Cpassword:e.target.value})}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div className="mb-3">
+                        <div className="form-check">
+                            <input className="form-check-input" type="checkbox" id="check1" />
+                            <label className="form-check-label" htmlFor="check1">
                             Terms & Conditions
                             </label> 
                         </div>
-                    </div>
+                    </div> */}
                     <div style={{display:"flex", justifyContent:"center"}}>
-                    <button style={{backgroundColor:"#D74A51", width:"20rem"}} type="submit" class="btn">Sign in</button>
+                    <button style={{backgroundColor:"#D74A51", width:"20rem"}} type="submit" className="btn" onClick={handleSubmit}>Sign in</button>
                     </div>
 
                 </div>
-                 <div  class="mt-3" style={{display:"flex", justifyContent:"center"}}>
+                 <div  className="mt-3" style={{display:"flex", justifyContent:"center"}}>
                     <hr style={{width:"16rem"}}></hr>
                      <p style={{ display:"flex", alignItems:"center", margin:"0 1rem"}}>or</p>
                     <hr style={{width:"16rem"}}></hr>

@@ -38,7 +38,7 @@ function Page() {
                             Terms & Conditions
                             </label> 
                         </div>
-                        <>Forget Password?</>
+                        <>Forgot Password?</>
                     </div>
                     <div style={{display:"flex", justifyContent:"center"}}>
                     <button style={{backgroundColor:"#D74A51", width:"20rem"}} type="submit" class="btn">Sign in</button>
