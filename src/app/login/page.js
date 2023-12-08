@@ -1,11 +1,15 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import LoginForm from './LoginForm'
 
 import './index.css';
 
 
-function Page() {
+function Page() { 
+
   return (
     <div className='' style={{ width: "99vw"}}>
         <div className='row'>
@@ -17,34 +21,9 @@ function Page() {
                     <Image src="/image/logo.png" alt="tamaduni logo" width={160} height={140} />
                     <h2 style={{letterSpacing:"10px"}}>Login</h2>
                 </div>
-                <div className='input'>
-                        {/* form inputs */}
-                    <div class="row mb-3">
-                        <label for="email" class="form-label" >Email</label>
-                        <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" style={{width:"26rem"}}/>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <div class="col-sm-10" >
-                        <input  type="password" class="form-control" id="password"  style={{width:"26rem"}}/>
-                        </div>
-                    </div>
-                    <div class="mb-3" style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="check1" />
-                            <label class="form-check-label" for="check1">
-                            Terms & Conditions
-                            </label> 
-                        </div>
-                        <>Forgot Password?</>
-                    </div>
-                    <div style={{display:"flex", justifyContent:"center"}}>
-                    <button style={{backgroundColor:"#D74A51", width:"20rem"}} type="submit" class="btn">Sign in</button>
-                    </div>
 
-                </div>
+                <LoginForm />
+
                  <div  class="mt-3" style={{display:"flex", justifyContent:"center"}}>
                     or
                  </div>
